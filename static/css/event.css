@@ -1,0 +1,14 @@
+.view-event {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.event-details {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+}

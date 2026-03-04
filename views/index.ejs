@@ -1,0 +1,35 @@
+<!DOCTYPE html5>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Campus Ops DashBoard</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+        <link rel="stylesheet" href="/css/index.css">
+    </head>
+    <body>
+        <div class="index">
+            <div class="container">
+                <h1 class="title"> List of upcoming events for your campus organization </h1>
+                <ul class="events-grid">
+                    <% for (let i = 0; i < events.length; i++) { %>
+                        <li class="event-card" id="<%= events[i].id %>">
+                            <div>
+                                <h2 class="event-title"><%= events[i].title %></h2>
+                                <p class="event-date"><% if (events[i].date) { %>Event Date: <%= events[i].date %><% } %></p>
+                                <p class="event-budget"><% if (events[i].budget) { %>Budget: $<%= events[i].budget %><% } %></p>
+                                <p class="event-drivers"><% if (events[i].drivers && events[i].drivers.length > 0) { %>Drivers: <%= events[i].drivers.join(', ') %><% } %></p>
+                                <a href="/event/<%= events[i].id %>/">View Details</a>
+                            </div>
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+
+        <script src="/js/index.js" async defer></script>
+    </body>
+</html>
+

@@ -1,0 +1,59 @@
+/* Variables */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #f0f0f0;
+    --text-color: #333;
+    --font-family: 'Arial', sans-serif;
+}
+
+body {
+    
+}
+
+.container {
+    max-width: 1250px;
+    width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+
+}
+
+/* Index page styling */
+
+.index {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    text-align: center;
+}
+
+.events-grid { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(240px, 35vw, 420px), 1fr));
+    gap: 1rem;
+    padding-inline-start:0;  /* Cancels the padding left that the list style has */
+}
+
+.events-grid * {
+    font-family: var(--font-family);
+    color: var(--text-color);
+}
+
+.events-grid li {
+    text-align: center;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 8px;
+    grid-row: auto;
+    list-style: none;
+    transition: transform 0.4s ease;
+}
+
+.events-grid li:hover {
+    transform: scale(1.06);
+    cursor: pointer;
+}
+
