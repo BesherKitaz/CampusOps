@@ -4,7 +4,7 @@
   "description": "A lightweight operations management platform for student organizations and small teams. Built to streamline event planning, driver coordination, role-based access, and internal logistics in one centralized dashboard.",
   "main": "index.js",
   "scripts": {
-  "dev": "nodemon --ext js,ejs index.js",
+    "dev": "nodemon --ext js,ejs index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,8 +20,10 @@
   },
   "homepage": "https://github.com/BesherKitaz/CampusOps#readme",
   "dependencies": {
+    "dotenv": "^17.3.1",
     "ejs": "^4.0.1",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "pg": "^8.20.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
